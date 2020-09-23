@@ -24,6 +24,12 @@ module.exports = {
             from: 'src/theme',
             to: 'theme',
         }),
+        new UglifyjsPlugin({
+            uglifyjsOptions: {
+                // uglifyjs配置
+            },
+            ignore: ['node_modules'],
+        }),
     ],
     use: [
         {

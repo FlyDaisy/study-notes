@@ -9,7 +9,8 @@ export default class Index {
     }
     async onLoad() {
         let subDay = Math.floor((+day() - +day(this.data.start))/(1000*60*60*24))+1;
-        this.setData({subDay});
+        let res = wx.getSystemInfoSync();
+        this.setData({subDay, minHeight: res.screenHeight});
         let slogan = await this.foo();
         console.log(slogan);
     }
@@ -27,7 +28,7 @@ export default class Index {
 </config>
 
 <template>
-<view class="container index">
+<view class="container index" style="min-height: {{minHeight}}px">
     <view class="self-info">
         <image class="avatar" src="/assets/images/avatar.jpeg" />
         <view class="desc">

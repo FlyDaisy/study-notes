@@ -1,7 +1,9 @@
 .container {
     width: auto;
     height: 100%;
+    // min-height: 1624rpx;
     padding-top: 24rpx;
+    padding-bottom: 50rpx;
 }
 // index
 .index {
@@ -53,7 +55,7 @@
         margin: 32rpx 24rpx 12rpx 26rpx;
     }
     .more {
-        width: 100%;
+        // width: 100%;
         margin: 0 24rpx 0 26rpx;
         display: flex;
         flex-wrap: wrap;
@@ -78,6 +80,10 @@
         .left {
             display: flex;
             flex-direction: column;
+        }
+        .title {
+            font-size: 32rpx;
+            color: #333333;
         }
         .sub-title {
             font-size: 24rpx;
