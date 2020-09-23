@@ -1,0 +1,51 @@
+<script>
+import {App} from '@wxa/core';
+
+@App
+export default class Main {
+    globalData = {
+        userInfo: 'Daisy',
+    }
+}
+</script>
+
+<config>
+{
+    "pages": [
+        "pages/index",
+        "pages/home",
+        "pages/list"
+    ],
+    "window":{
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "@navBgColor",
+        "navigationBarTitleText": "",
+        "navigationBarTextStyle": "@navTxtStyle"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index",
+                "text": "首页",
+                "iconPath": "assets/images/index.png",
+                "selectedIconPath": "assets/images/index-selected.png"
+            },
+            {
+                "pagePath": "pages/home",
+                "text": "我的",
+                "iconPath": "assets/images/my.png",
+                "selectedIconPath": "assets/images/my-selected.png"
+            }
+        ]
+    },
+    "darkmode": true,
+    "themeLocation": "theme/theme.json"
+}
+</config>
+
+<style lang="scss">
+page {
+    width: 100%;
+    height: 100%;
+}
+</style>
