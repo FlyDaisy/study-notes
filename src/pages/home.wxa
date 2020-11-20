@@ -14,7 +14,9 @@ export default class home {
 </config>
 
 <template>
-<view class="home">持续更新中。。。</view>
+<view class="home">
+    whistle使用记录
+</view>
 
 </template>
 

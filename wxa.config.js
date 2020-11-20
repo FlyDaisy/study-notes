@@ -4,6 +4,8 @@ const CopyPlugin = require('@wxa/plugin-copy');
 let prod = process.env.NODE_ENV === 'production';
 const path = require('path');
 
+const BindHijackPlugin = require('@wxa/plugin-bind-hijack');
+
 // 环境变量
 const envlist = {
     'WXA_ENV': process.env.NODE_ENV || 'development',
@@ -30,6 +32,8 @@ module.exports = {
             },
             ignore: ['node_modules'],
         }),
+        // 拦截所有事件
+        new BindHijackPlugin()
     ],
     use: [
         {

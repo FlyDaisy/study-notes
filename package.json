@@ -28,6 +28,7 @@
     },
     "dependencies": {
         "@wxa/core": "^2.2.7",
+        "@wxa/plugin-bind-hijack": "^2.2.5",
         "dayjs": "^1.8.36",
         "regenerator-runtime": "^0.13.1"
     }

@@ -11,8 +11,12 @@ export default class Index {
         let subDay = Math.floor((+day() - +day(this.data.start))/(1000*60*60*24))+1;
         let res = wx.getSystemInfoSync();
         this.setData({subDay, minHeight: res.screenHeight});
-        let slogan = await this.foo();
-        console.log(slogan);
+    }
+
+    goFood() {
+        wx.vibrateShort({
+            type: 'medium',
+        });
     }
 
     async foo() {
@@ -28,7 +32,7 @@ export default class Index {
 </config>
 
 <template>
-<view class="container index" style="min-height: {{minHeight}}px">
+<view class="container index">
     <view class="self-info">
         <image class="avatar" src="/assets/images/avatar.jpeg" />
         <view class="desc">
@@ -57,21 +61,21 @@ export default class Index {
 
     <view class="head">更多精彩</view>
     <view class="more">
-        <view class="food">
+        <view class="food" bindtap="goFood" >
             <view class="left">
                 <view class="title">招财吃食</view>
                 <view class="sub-title">日常爱吃</view>
             </view>
             <image src="/assets/images/eat.png" />
         </view>
-        <view class="toy">
+        <view class="toy" catchtap="goFood">
             <view class="left">
                 <view class="title">招财玩具</view>
                 <view class="sub-title">日常爱玩</view>
             </view>
             <image src="/assets/images/toy.png"/>
         </view>
-        <view class="fill-out">
+        <view class="fill-out" bind:touchstart="goFood">
             <view class="left">
                 <view class="title">长肉秘籍</view>
                 <view class="sub-title">最受欢迎</view>
