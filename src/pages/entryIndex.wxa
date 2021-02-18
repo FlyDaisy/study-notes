@@ -1,0 +1,31 @@
+<script>
+import { Page } from "@wxa/core";
+
+@Page
+export default class EntryIndex {
+	data = {
+		loading: true
+	};
+
+	onLoad() {
+		setTimeout(() => {
+			this.setData({ loading: false });
+			this.$router.push("/pages/index");
+		}, 3000);
+	}
+}
+</script>
+
+<config>
+{
+    "navigationStyle": "custom",
+    "usingComponents": {
+        "start-load": "@/components/startLoad"
+    }
+}
+</config>
+
+<template>
+	<start-load wx:if="{{loading}}"></start-load>
+</template>
+

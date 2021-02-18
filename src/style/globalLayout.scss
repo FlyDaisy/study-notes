@@ -1,0 +1,28 @@
+// flex layout
+.flex {
+    display: flex;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+.flex-between {
+    justify-content: space-between;
+}
+
+// font-size
+.fz-12 {
+    font-size: 24rpx;
+}
+.fz-13 {
+    font-size: 26rpx;
+}
+.fz-14 {
+    font-size: 28rpx;
+}
+.fz-24 {
+    font-size: 48rpx;
+}

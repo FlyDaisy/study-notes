@@ -1,0 +1,11 @@
+@mixin ani-font($name, $duration, $delay, $len1, $len2) {
+    animation: $name $duration ease $delay infinite both;
+    @keyframes #{$name} {
+        0% {
+            transform: translateY($len1);
+        }
+        100% {
+            transform: translateY($len2);
+        }
+    }
+}
