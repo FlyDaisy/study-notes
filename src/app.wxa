@@ -1,27 +1,28 @@
 <script>
-import {App, wxa} from '@wxa/core';
-import BindHijackPlugin from '@wxa/plugin-bind-hijack/runtime';
+import { App, wxa } from "@wxa/core";
+import BindHijackPlugin from "@wxa/plugin-bind-hijack/runtime";
 
 wxa.use(BindHijackPlugin, {
-    // 所有事件之后调用
-    after: function(e){
-        wx.vibrateLong();
-    },
+	// 所有事件之后调用
+	after: function(e) {
+		wx.vibrateLong();
+	}
 });
 
 @App
 export default class Main {
-    globalData = {
-        userInfo: 'Daisy',
-    }
+	globalData = {
+		userInfo: "Daisy"
+	};
 }
 </script>
 
 <config>
 {
     "pages": [
+        "pages/entryIndex",
         "pages/index",
-        "pages/home",
+        "pages/home"
     ],
     "window":{
         "backgroundTextStyle": "dark",

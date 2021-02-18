@@ -1,10 +1,13 @@
 @import "./style/global.scss";
+@import "./style/globalLayout.scss";
 @import "./style/index.scss";
+@import "./style/mixin/animate.scss";
+@import "./style/component.scss";
 
 @media (prefers-color-scheme: dark) {
-    @import "./style/dark/index.scss";
+    @import "./style/dark/models.scss";
 }
 
 @media (prefers-color-scheme: light) {
-    @import "./style/light/index.scss";
+    @import "./style/light/models.scss";
 }

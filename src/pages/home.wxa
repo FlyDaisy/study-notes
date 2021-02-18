@@ -1,10 +1,8 @@
 <script>
-import {Page} from '@wxa/core';
+import { Page } from "@wxa/core";
 
 @Page
-export default class home {
-    
-}
+export default class home {}
 </script>
 
 <config>
@@ -14,9 +12,8 @@ export default class home {
 </config>
 
 <template>
-<view class="home">
-    whistle使用记录
-</view>
-
+	<view class="container home">
+		<view class="tips-word">欢迎来到daisy的学习日志频道呀，一起来学习吧</view>
+	</view>
 </template>
 

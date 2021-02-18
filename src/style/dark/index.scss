@@ -1,3 +1,16 @@
 .container {
     background: #000;
 }
+.index {
+    .self-info,
+    .more > view {
+        background: #d7e1e0;
+    }
+    .head,
+    .logo {
+        color: #d7e1e0;
+    }
+    .more > view > image {
+        filter: drop-shadow(2px 4px 6px black);
+    }
+}

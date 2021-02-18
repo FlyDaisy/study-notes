@@ -1,27 +1,30 @@
 <script>
-import {Page} from '@wxa/core';
-import day from 'dayjs';
+import { Page } from "@wxa/core";
+import day from "dayjs";
 
 @Page
 export default class Index {
-    data = {
-        start: '2020-05-30',
-    }
-    async onLoad() {
-        let subDay = Math.floor((+day() - +day(this.data.start))/(1000*60*60*24))+1;
-        let res = wx.getSystemInfoSync();
-        this.setData({subDay, minHeight: res.screenHeight});
-    }
+	data = {
+		start: "2020-05-30"
+	};
+	onLoad() {
+		let subDay =
+			Math.floor(
+				(+day() - +day(this.data.start)) / (1000 * 60 * 60 * 24)
+			) + 1;
+		let res = wx.getSystemInfoSync();
+		this.setData({ subDay, minHeight: res.screenHeight });
+	}
 
-    goFood() {
-        wx.vibrateShort({
-            type: 'medium',
-        });
-    }
+	goFood() {
+		wx.vibrateShort({
+			type: "medium"
+		});
+	}
 
-    async foo() {
-        return await Promise.resolve('Hey, Async/Await is usabled');
-    }
+	async foo() {
+		return await Promise.resolve("Hey, Async/Await is usabled");
+	}
 }
 </script>
 
@@ -32,67 +35,83 @@ export default class Index {
 </config>
 
 <template>
-<view class="container index">
-    <view class="self-info">
-        <image class="avatar" src="/assets/images/avatar.jpeg" />
-        <view class="desc">
-            <view class="desc-name">Daisy</view>
-            <view class="desc-detail">与小奶喵打打闹闹的第{{subDay}}天</view>
-        </view>
-    </view>
-    <swiper class="swiper" 
-        circular="true"
-        autoplay="true"
-        indicator-dots="true"
-        interval="3000"
-        previous-margin="35rpx"
-        next-margin="15rpx"
-        indicator-active-color="#ffffff">
-        <swiper-item class="swiper-item">
-            <image src="/assets/images/img0.jpg" mode="aspectFill" class="swiper-img {{current == 0 ? 'active' : ''}}"/>
-        </swiper-item>
-        <swiper-item class="swiper-item">
-            <image src="/assets/images/img1.jpg" mode="aspectFill" class="swiper-img {{current == 1 ? 'active' : ''}}"/>
-        </swiper-item>
-        <swiper-item class="swiper-item">
-            <image src="/assets/images/img2.jpg" mode="aspectFill" class="swiper-img {{current == 2 ? 'active' : ''}}"/>
-        </swiper-item>
-    </swiper>
+	<view class="container index">
+		<view class="self-info">
+			<image class="avatar" src="/assets/images/avatar.jpeg"></image>
+			<view class="desc">
+				<view class="desc-name">Daisy</view>
+				<view class="desc-detail">与小奶喵打打闹闹的第{{subDay}}天</view>
+			</view>
+		</view>
+		<swiper
+			class="swiper"
+			circular="true"
+			autoplay="true"
+			indicator-dots="true"
+			interval="3000"
+			previous-margin="35rpx"
+			next-margin="15rpx"
+			indicator-active-color="#ffffff"
+		>
+			<swiper-item class="swiper-item">
+				<image
+					src="/assets/images/img0.jpg"
+					mode="widthFix"
+					class="swiper-img {{current == 0 ? 'active' : ''}}"
+				>
+			</swiper-item>
+			<swiper-item class="swiper-item">
+				<image
+					src="/assets/images/img1.jpg"
+					mode="widthFix"
+					class="swiper-img {{current == 1 ? 'active' : ''}}"
+				>
+				</image>
+			</swiper-item>
+			<swiper-item class="swiper-item">
+				<image
+					src="/assets/images/img2.jpg"
+					mode="widthFix"
+					class="swiper-img {{current == 2 ? 'active' : ''}}"
+				>
+				</image>
+			</swiper-item>
+		</swiper>
 
-    <view class="head">更多精彩</view>
-    <view class="more">
-        <view class="food" bindtap="goFood" >
-            <view class="left">
-                <view class="title">招财吃食</view>
-                <view class="sub-title">日常爱吃</view>
-            </view>
-            <image src="/assets/images/eat.png" />
-        </view>
-        <view class="toy" catchtap="goFood">
-            <view class="left">
-                <view class="title">招财玩具</view>
-                <view class="sub-title">日常爱玩</view>
-            </view>
-            <image src="/assets/images/toy.png"/>
-        </view>
-        <view class="fill-out" bind:touchstart="goFood">
-            <view class="left">
-                <view class="title">长肉秘籍</view>
-                <view class="sub-title">最受欢迎</view>
-            </view>
-            <image src="/assets/images/meat.png"/>
-        </view>
-        <view class="fight">
-            <view class="left">
-                <view class="title">招财拳击</view>
-                <view class="sub-title">日常互搏</view>
-            </view>
-            <image src="/assets/images/fight.png"/>
-        </view>
-        
-    </view>
-    
-</view>
+		<view class="head">更多精彩</view>
+		<view class="more">
+			<view class="food" bindtap="goFood">
+				<view class="left">
+					<view class="title">招财吃食</view>
+					<view class="sub-title">日常爱吃</view>
+				</view>
+				<image src="/assets/images/eat.png"></image>
+			</view>
+			<view class="toy" catchtap="goFood">
+				<view class="left">
+					<view class="title">招财玩具</view>
+					<view class="sub-title">日常爱玩</view>
+				</view>
+				<image src="/assets/images/toy.png"></image>
+			</view>
+			<view class="fill-out" bind:touchstart="goFood">
+				<view class="left">
+					<view class="title">长肉秘籍</view>
+					<view class="sub-title">最受欢迎</view>
+				</view>
+				<image src="/assets/images/meat.png"></image>
+			</view>
+			<view class="fight">
+				<view class="left">
+					<view class="title">招财拳击</view>
+					<view class="sub-title">日常互搏</view>
+				</view>
+				<image src="/assets/images/fight.png"></image>
+			</view>
+		</view>
+
+		<view class="logo">Daisy</view>
+	</view>
 </template>
 
 
