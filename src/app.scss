@@ -1,8 +1,11 @@
+@import "./style/mixin/index.scss";
+@import "./style/mixin/animate.scss";
 @import "./style/global.scss";
 @import "./style/globalLayout.scss";
 @import "./style/index.scss";
-@import "./style/mixin/animate.scss";
 @import "./style/component.scss";
+@import "./style/home.scss";
+@import "./style/cssLearning.scss";
 
 @media (prefers-color-scheme: dark) {
     @import "./style/dark/models.scss";

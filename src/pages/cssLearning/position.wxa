@@ -1,0 +1,56 @@
+<script>
+import {Page} from '@wxa/core';
+
+@Page
+export default class position {}
+</script>
+
+<config>
+{
+    "navigationBarTitleText": "position"
+}
+</config>
+
+<template>
+<view class="container position">
+    <view class="relative">
+        <view>relative定位：元素先放置在未添加定位时的位置，然后在不改变页面布局的前提下调整元素位置（因此会在此元素未添加定位时所在位置留下空白，即会影响到margin）</view>
+        <view class="box">one</view>
+        <view class="box red">two</view>
+        <view class="box">three</view>
+        <view class="box">four</view>
+    </view>
+    <view class="absolute">
+        <view>元素会被移出正常文档流，并不为元素预留空间，通过指定元素相对于最近的非 static 定位祖先元素的偏移，来确定元素位置。绝对定位的元素可以设置外边距（margins），且不会与其他边距合并。</view>
+        <view class="box">one</view>
+        <view class="box red">two</view>
+        <view class="box">three</view>
+        <view class="box">four</view>
+    </view>
+</view>
+</template>
+
+<style lang="scss">
+.box {
+    display: inline-block;
+    width: 100rpx;
+    height: 100rpx;
+    background: blue;
+    color: white;
+}
+.red {
+    position: relative;
+    top: 10rpx;
+    left: 10rpx;
+    margin: 0 30rpx; // 此时得到的margin-right=20rpx, 有10rpx被left：10rpx覆盖了
+    background: red;
+}
+.absolute {
+    position: relative;
+    .red {
+        position: absolute;
+    }
+}
+</style>
+
+

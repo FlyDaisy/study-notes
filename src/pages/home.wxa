@@ -2,7 +2,12 @@
 import { Page } from "@wxa/core";
 
 @Page
-export default class home {}
+export default class home {
+	goCSSLearning(e) {
+		const {url} = e.currentTarget.dataset;
+		wx.navigateTo({url})
+	}
+}
 </script>
 
 <config>
@@ -13,7 +18,21 @@ export default class home {}
 
 <template>
 	<view class="container home">
-		<view class="tips-word">欢迎来到daisy的学习日志频道呀，一起来学习吧</view>
+		<view class="home-title fz-14">欢迎来到daisy的学习日志频道呀，一起来学习吧~</view>
+		<view class="home-body flex-between">
+			<view class="learn-box box-style flex-1">
+				<view class="title">学习css</view>
+				<view class="flex flex-wrap fz-14">
+					<view class="learn-item" bindtap="goCSSLearning" data-url="/pages/cssLearning/position">其他定位</view>
+					<view class="learn-item" bindtap="goCSSLearning" data-url="/pages/cssLearning/sticky">sticky定位</view>
+					<view class="learn-item" bindtap="goCSSLearning" data-url="/pages/cssLearning/cubicBizier">塞贝尔曲线</view>
+					<view class="learn-item" bindtap="goCSSLearning" data-url="/pages/cssLearning/blockFormatContext">BFC</view>
+				</view>
+			</view>
+			<view class="learn-box box-js flex-1">
+				<view class="title">学习JavaScript</view>
+			</view>
+		</view>
 	</view>
 </template>
 

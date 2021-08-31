@@ -1,0 +1,22 @@
+
+.home-body {
+    margin: 20rpx 0;
+}
+.learn-box {
+
+    .title {
+        padding: 30rpx;
+        border-radius: 100rpx / 750rpx;
+        text-align: center;
+        background: lightcoral;
+        color: #fff;
+    }
+    .learn-item {
+        padding: 10rpx;
+        margin: 20rpx;
+        border-radius: 100rpx 600rpx / 750rpx;
+        background: lightblue;
+        color: #fff;
+        text-align: center;
+    }
+}

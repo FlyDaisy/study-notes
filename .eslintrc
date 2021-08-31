@@ -35,6 +35,8 @@
         "camelcase": "warn",
         "no-invalid-this": "warn",
         "new-cap": "warn",
-        "guard-for-in": "warn"
+        "guard-for-in": "warn",
+        "no-tabs":"off",
+        "no-undef": "off"
     }
 }

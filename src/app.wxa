@@ -22,7 +22,11 @@ export default class Main {
     "pages": [
         "pages/entryIndex",
         "pages/index",
-        "pages/home"
+        "pages/home",
+        "pages/cssLearning/position",
+        "pages/cssLearning/sticky",
+        "pages/cssLearning/cubicBizier",
+        "pages/cssLearning/blockFormatContext"
     ],
     "window":{
         "backgroundTextStyle": "dark",

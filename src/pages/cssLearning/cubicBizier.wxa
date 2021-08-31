@@ -1,0 +1,19 @@
+<script>
+import { Page } from "@wxa/core";
+
+@Page
+export default class Bizier{
+    
+}
+</script>
+
+<config>
+{
+    "navigationBarTitleText": "塞贝尔曲线"
+}
+</config>
+
+<template>
+
+</template>
+

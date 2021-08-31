@@ -1,0 +1,22 @@
+@mixin sticky($top, $right: auto, $bottom: auto, $left: auto, $back: auto, $color: auto) {
+    position: sticky;
+    position: -webkit-sticky;
+    @if $top != auto {
+        top: $top
+    }
+    @if $right != auto {
+        right: $right
+    }
+    @if $bottom != auto {
+        bottom: $bottom
+    }
+    @if $left != auto {
+        left: $left
+    }
+    @if $back != auto {
+        background: $back;
+    }
+    @if $color != auto {
+        color: $color;
+    }
+}

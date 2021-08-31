@@ -17,9 +17,7 @@ export default class Index {
 	}
 
 	goFood() {
-		wx.vibrateShort({
-			type: "medium"
-		});
+		wx.vibrateShort({type: "medium"});
 	}
 
 	async foo() {

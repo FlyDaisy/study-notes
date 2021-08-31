@@ -1,0 +1,21 @@
+.block-format-context {
+    .margin-test {
+        .box {
+            width: 200rpx;
+            height: 200rpx;
+            margin: 20rpx;
+            background: red;
+        }
+        .large {
+            margin: 40rpx 20rpx;
+        }
+    }
+    .sticky-top {
+        @include sticky(20rpx, auto, auto, auto, navajowhite, chocolate);
+    }
+    .head {
+        background: linear-gradient(45deg, black, transparent);
+        color: #fff;
+        text-indent: 20rpx;
+    }
+}
