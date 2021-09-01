@@ -27,6 +27,8 @@ export default class home {
 					<view class="learn-item" bindtap="goCSSLearning" data-url="/pages/cssLearning/sticky">sticky定位</view>
 					<view class="learn-item" bindtap="goCSSLearning" data-url="/pages/cssLearning/cubicBizier">塞贝尔曲线</view>
 					<view class="learn-item" bindtap="goCSSLearning" data-url="/pages/cssLearning/blockFormatContext">BFC</view>
+					<view class="learn-item" bindtap="goCSSLearning" data-url="/pages/cssLearning/inlineFormatContext">IFC</view>
+					
 				</view>
 			</view>
 			<view class="learn-box box-js flex-1">

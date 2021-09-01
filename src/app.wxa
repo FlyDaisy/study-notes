@@ -26,7 +26,8 @@ export default class Main {
         "pages/cssLearning/position",
         "pages/cssLearning/sticky",
         "pages/cssLearning/cubicBizier",
-        "pages/cssLearning/blockFormatContext"
+        "pages/cssLearning/blockFormatContext",
+        "pages/cssLearning/inlineFormatContext"
     ],
     "window":{
         "backgroundTextStyle": "dark",
